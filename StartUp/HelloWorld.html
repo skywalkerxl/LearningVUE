@@ -24,6 +24,14 @@
             </li>
         </ol>
     </div>
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">逆转消息</button>
+    </div>
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
 <script>
     var app = new Vue({
         el: '#app',
@@ -56,6 +64,29 @@
             ]
         }
     })
+
+    //  在这段操作中我们可以看到所有的DOM操作都有VUE来完成
+    //  我们并不需要直接操作DOM
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        methods:{
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('');
+            }
+        }
+    })
+
+    var app6 = new Vue({
+        el: '#app-6',
+        data: {
+            message: 'Hello Vue'
+        }
+    })
+
+
 </script>
 </body>
 </html>
