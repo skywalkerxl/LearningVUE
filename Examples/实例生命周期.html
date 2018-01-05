@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>实例生命周期</title>
+    <script src="../vue.js"></script>
 </head>
 <body>
 
+<script>
+    var vm = new Vue({
+        data: {
+            a: 1
+        },
+        created: function () {
+            // this 指向vm实例
+            console.log('a is:' + this.a)
+        }
+    })
+
+    // => a is: 1
+</script>
 </body>
 </html>

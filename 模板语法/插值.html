@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>插值</title>
 </head>
 <body>
+<!-- 文本 -->
+<span>{{ messgae }}</span>
+<span v-once>这个值将不会再改变：{{ message }}</span>
 
+
+
+<!-- 原始HTML -->
+<div v-html="rawHtml"></div>
+
+
+<!-- 特性 Mustache语法不能作用在HTML特性上-->
+<div v-bind:id="dynamicId"></div>
+<button v-bind:disabled="isButtonDisabled"></button>
+<!-- 使用Javascript表达式 -->
+
+<script></script>
 </body>
 </html>
